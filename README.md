@@ -82,19 +82,7 @@ Confusion matrix (rows = actual, cols = LOW/MEDIUM/HIGH): `[[322, 32, 0], [44, 9
 
 > Models are chosen on **cross-validation**, not on the test set. Differences between the top candidates are small, and some test scores (e.g. Random Forest RMSE, Logistic Regression F1) are slightly better than the selected model's — this is expected noise and is reported transparently. MEDIUM is the hardest class (F1 0.58) because it is the narrow middle band.
 
-## 13. Application screenshots
-Add your screenshots to `docs/screenshots/` and reference them here:
-
-| Page | Screenshot |
-|---|---|
-| Dashboard | `docs/screenshots/dashboard.png` *(placeholder)* |
-| Demand Prediction | `docs/screenshots/demand.png` *(placeholder)* |
-| Waste Risk | `docs/screenshots/risk.png` *(placeholder)* |
-| Surplus Analysis | `docs/screenshots/surplus.png` *(placeholder)* |
-| Analytics | `docs/screenshots/analytics.png` *(placeholder)* |
-| Model Performance | `docs/screenshots/models.png` *(placeholder)* |
-
-## 14. Installation
+## 13. Installation
 ```bash
 python -m venv .venv
 .venv\Scripts\activate        # Windows  (source .venv/bin/activate on macOS/Linux)
@@ -102,7 +90,7 @@ pip install -r requirements.txt
 ```
 Tested with Python 3.10, pandas 2.1, scikit-learn 1.3, Streamlit 1.47.
 
-## 15. How to run
+## 14. How to run
 ```bash
 python run.py                  # trains if needed, then launches the app (http://localhost:8501)
 ```
@@ -114,7 +102,7 @@ python -m pytest -q            # 76 tests
 ```
 Pipeline options: `--seed N`, `--keep-raw`, `--quick` (smaller models).
 
-## 16. Project structure
+## 15. Project structure
 ```
 foodwise-ai/
 ├── app/
@@ -140,13 +128,13 @@ foodwise-ai/
     TESTING.md, LIMITATIONS.md, FUTURE_SCOPE.md
 ```
 
-## 17. Limitations
+## 16. Limitations
 See [LIMITATIONS.md](LIMITATIONS.md). Key points: synthetic data; censored demand (sold ≤ prepared); thresholds are assumptions; interval is approximate; single simulated site.
 
-## 18. Future scope
+## 17. Future scope
 See [FUTURE_SCOPE.md](FUTURE_SCOPE.md): real data & retraining, probabilistic forecasts, drift monitoring, weather API, menu-level forecasting, human-approved donation workflow.
 
-## 19. Ethical considerations
+## 18. Ethical considerations
 - **Synthetic data:** results do not transfer automatically to real kitchens.
 - **Uncertainty:** every prediction can be wrong; ranges are indicative.
 - **Food safety:** surplus must pass safety checks before any redistribution.
@@ -155,5 +143,3 @@ See [FUTURE_SCOPE.md](FUTURE_SCOPE.md): real data & retraining, probabilistic fo
 - **Bias/generalisation:** models learn one simulated site's patterns; re-validate before use elsewhere (festivals, menu changes, new campuses).
 - **No unsupported impact claims:** "Estimated Food Saved" is a *potential* figure, not a measured outcome.
 
-## 20. Licence
-Educational/portfolio project.
